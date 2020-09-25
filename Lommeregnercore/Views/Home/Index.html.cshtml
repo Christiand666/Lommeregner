@@ -1,0 +1,25 @@
+﻿@model Lommeregnercore.Models.Calculator
+@{
+    ViewData["Title"] = "Home Page";
+}
+<form asp-action="Index">
+    <div class="text-center">
+        <h1 class="display-4">Welcome, maximum effort ;)</h1>
+
+        <p> <label>Første tal</label> </p>
+        <p> <input type="number" asp-for="Value1" /> </p>
+
+        <p> <label>Andet tal</label> </p>
+        <p> <input type="number" asp-for="Value2" /> </p>
+
+
+        <p> <input type="submit" value="+" asp-for="Calulate" /> </p>
+        <p> <input type="submit" value="-" asp-for="Calulate" /> </p>
+        <p> <input type="submit" value="*" asp-for="Calulate" /> </p>
+        <p> <input type="submit" value="/" asp-for="Calulate" /> </p>
+
+        <p> <label>Resultat</label> </p>
+        <p> <input type="number" asp-for="@ViewData["result"]" /> </p>
+    </div>
+    <img src="~/Images/Lommeregner.jpg" alt="" />
+</form>
